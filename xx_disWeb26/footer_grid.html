@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Grid — Equipo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #023e8a;
+      font-family: 'Nunito', sans-serif;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    /* GRID 2 filas × 4 columnas */
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+      gap: 14px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .footer-cell {
+      background: rgba(255,255,255,0.09);
+      border-radius: 12px;
+      padding: 14px 12px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: background 0.3s, transform 0.3s;
+    }
+    .footer-cell:hover {
+      background: rgba(255,255,255,0.18);
+      transform: translateY(-4px);
+    }
+    .footer-cell .avatar {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .footer-cell h4 {
+      font-family: 'Pacifico', cursive;
+      font-size: 0.85rem;
+      color: #f77f00;
+      margin-bottom: 4px;
+    }
+    .footer-cell .role {
+      font-size: 0.72rem;
+      color: #90e0ef;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .footer-cell p {
+      font-size: 0.72rem;
+      color: #b3d4f5;
+      line-height: 1.4;
+    }
+
+    /* ---- RESPONSIVE 576px ---- */
+    @media (max-width: 576px) {
+      body { background: #880e4f; }   /* fondo cambia */
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+      }
+      .footer-cell h4,
+      .footer-cell .role,
+      .footer-cell p {
+        font-size: 0.5rem;  /* letra cambia a 0.5rem */
+      }
+      .footer-cell .avatar { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="footer-grid">
+
+  <!-- FILA 1 -->
+  <div class="footer-cell">
+    <span class="avatar">👩‍💻</span>
+    <h4>Ana García</h4>
+    <div class="role">Diseñadora UI</div>
+    <p>Responsable del diseño visual, paleta de colores y la experiencia de usuario.</p>
+  </div>
+
+  <div class="footer-cell">
+    <span class="avatar">👨‍💻</span>
+    <h4>Carlos López</h4>
+    <div class="role">Desarrollador Frontend</div>
+    <p>Implementó la estructura HTML, CSS Grid y la integración de Bootstrap.</p>
+  </div>
+
+  <div class="footer-cell">
+    <span class="avatar">👩‍🎨</span>
+    <h4>Valentina Ruiz</h4>
+    <div class="role">Contenido & Media</div>
+    <p>Recopilación de audios, videos y redacción del cuento de animales.</p>
+  </div>
+
+  <div class="footer-cell">
+    <span class="avatar">👨‍🔬</span>
+    <h4>Miguel Torres</h4>
+    <div class="role">Responsive Design</div>
+    <p>Implementó las media queries y el diseño adaptable para móviles.</p>
+  </div>
+
+  <!-- FILA 2 -->
+  <div class="footer-cell">
+    <span class="avatar">🐾</span>
+    <h4>Sofía Martínez</h4>
+    <div class="role">QA & Testing</div>
+    <p>Realizó pruebas en distintos dispositivos y validó el diseño responsive.</p>
+  </div>
+
+  <div class="footer-cell">
+    <span class="avatar">🌈</span>
+    <h4>Diego Herrera</h4>
+    <div class="role">Animaciones CSS</div>
+    <p>Desarrolló el carrusel infinito y el arcoíris animado de letras.</p>
+  </div>
+
+  <div class="footer-cell">
+    <span class="avatar">📚</span>
+    <h4>Laura Jiménez</h4>
+    <div class="role">Documentación</div>
+    <p>Redactó el README, instrucciones de uso y organización del proyecto.</p>
+  </div>
+
+  <div class="footer-cell">
+    <span class="avatar">🏆</span>
+    <h4>Andrés Morales</h4>
+    <div class="role">Líder del Proyecto</div>
+    <p>Coordinación del equipo, revisión final y entrega del proyecto xx_disWeb26.</p>
+  </div>
+
+</div>
+
+</body>
+</html>

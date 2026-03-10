@@ -1,0 +1,245 @@
+/* =============================================
+   xx_disWeb26 — Estilos principales
+   Metodología: Grid + Flexbox + Bootstrap
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700&family=Abril+Fatface&family=Dancing+Script:wght@700&display=swap');
+
+/* ---- Variables CSS ---- */
+:root {
+  --primary:   #0077b6;
+  --accent:    #f77f00;
+  --bg:        #f0f9ff;
+  --footer-bg: #023e8a;
+  --text:      #1a1a2e;
+  --card-bg:   #ffffff;
+  --shadow:    0 4px 20px rgba(0,0,0,0.10);
+  --radius:    14px;
+  --font-body: 'Nunito', sans-serif;
+  --font-title:'Pacifico', cursive;
+  --font-story:'Dancing Script', cursive;
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---- NAVBAR ---- */
+.navbar-brand { font-family: var(--font-title); font-size: 1.5rem; color: var(--accent) !important; }
+.navbar { background: var(--primary) !important; box-shadow: var(--shadow); }
+.nav-link { color: #fff !important; font-weight: 600; transition: color 0.2s; }
+.nav-link:hover { color: var(--accent) !important; }
+
+/* ---- SECTION TITLES ---- */
+.section-title {
+  font-family: var(--font-title);
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ---- IFRAME WRAPPER ---- */
+.iframe-box {
+  width: 100%;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: white;
+}
+
+/* ---- CARRUSEL SECTION ---- */
+#carrusel-section {
+  padding: 40px 0 20px;
+}
+#carrusel-section iframe {
+  height: 280px;
+}
+
+/* ============================================
+   MOSAICO AUDIO/VIDEO — GRID
+   ============================================ */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.media-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.media-card:hover { transform: translateY(-5px); }
+.media-card iframe,
+.media-card audio {
+  width: 100%;
+  border: none;
+}
+.media-card .media-label {
+  padding: 10px 14px;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.9rem;
+  background: #e8f4fd;
+}
+.media-card audio { padding: 10px; background: #f0f9ff; }
+
+/* ============================================
+   CUENTO — Primera letra y primera línea
+   ============================================ */
+#cuento-section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.story-paragraph {
+  background: white;
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+/* Primera letra — drop cap */
+.story-paragraph::first-letter {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 4.5rem;
+  float: left;
+  line-height: 0.8;
+  margin: 6px 10px 0 0;
+  color: var(--accent);
+  text-shadow: 2px 2px 0 var(--primary);
+}
+/* Primera línea */
+.story-paragraph::first-line {
+  font-family: 'Abril Fatface', cursive;
+  color: var(--primary);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================
+   ARCOÍRIS DE LETRAS
+   ============================================ */
+#arcoiris-section {
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #e0f7fa 0%, #fff9c4 50%, #fce4ec 100%);
+}
+.rainbow-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  display: inline-block;
+}
+.rainbow-title span {
+  display: inline-block;
+  animation: bounce 1s ease infinite alternate;
+}
+.rainbow-title span:nth-child(1)  { color: #e53935; animation-delay: 0.0s; }
+.rainbow-title span:nth-child(2)  { color: #e64a19; animation-delay: 0.1s; }
+.rainbow-title span:nth-child(3)  { color: #f57c00; animation-delay: 0.2s; }
+.rainbow-title span:nth-child(4)  { color: #f9a825; animation-delay: 0.3s; }
+.rainbow-title span:nth-child(5)  { color: #558b2f; animation-delay: 0.4s; }
+.rainbow-title span:nth-child(6)  { color: #00838f; animation-delay: 0.5s; }
+.rainbow-title span:nth-child(7)  { color: #1565c0; animation-delay: 0.6s; }
+.rainbow-title span:nth-child(8)  { color: #6a1b9a; animation-delay: 0.7s; }
+.rainbow-title span:nth-child(9)  { color: #ad1457; animation-delay: 0.8s; }
+.rainbow-title span:nth-child(10) { color: #00838f; animation-delay: 0.9s; }
+.rainbow-title span:nth-child(11) { color: #558b2f; animation-delay: 1.0s; }
+.rainbow-title span:nth-child(12) { color: #f57c00; animation-delay: 0.7s; }
+.rainbow-title span:nth-child(13) { color: #e53935; animation-delay: 0.3s; }
+.rainbow-title span:nth-child(14) { color: #1565c0; animation-delay: 0.5s; }
+.rainbow-title span:nth-child(15) { color: #6a1b9a; animation-delay: 0.2s; }
+
+@keyframes bounce {
+  from { transform: translateY(0px) rotate(-2deg); }
+  to   { transform: translateY(-12px) rotate(2deg); }
+}
+
+/* ============================================
+   FOOTER — GRID 2 filas x 4 columnas
+   ============================================ */
+footer {
+  background: var(--footer-bg);
+  color: white;
+  padding: 40px 20px 20px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto 20px;
+}
+.footer-cell {
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: background 0.3s;
+}
+.footer-cell:hover { background: rgba(255,255,255,0.15); }
+.footer-cell .avatar {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+.footer-cell h4 {
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.footer-cell p {
+  font-size: 0.78rem;
+  color: #b3d4f5;
+  line-height: 1.4;
+}
+.footer-credit {
+  text-align: center;
+  color: #b3d4f5;
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 16px;
+}
+
+/* ============================================
+   RESPONSIVE — 576px breakpoint
+   ============================================ */
+@media (max-width: 576px) {
+  body { font-size: 0.88rem; background: #fff3e0; }
+
+  .section-title { font-size: 1.4rem; }
+  .rainbow-title { font-size: 1.6rem; }
+
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer grid → 1 column */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+  .footer-cell h4, .footer-cell p { font-size: 0.5rem; }
+  footer { background: #880e4f; }  /* color de fondo cambia */
+
+  #cuento-section { padding: 20px 10px; }
+  .story-paragraph { font-size: 0.9rem; padding: 20px; }
+  .story-paragraph::first-letter { font-size: 3rem; }
+}
