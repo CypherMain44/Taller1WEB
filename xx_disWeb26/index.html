@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animales Domésticos — Grid + Flex + Bootstrap</title>
+  <title>Grid + Flex + Bootstrap</title>
 
-  <!-- Favicon aula de clase -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏫</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧑‍🏫</text></svg>">
 
   <!-- Bootstrap 5 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +23,7 @@
      ============================================= -->
 <nav class="navbar navbar-expand-lg sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="#">🐾 MascotasMundo</a>
+    <a class="navbar-brand" href="#">Taller1_web</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
       aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
@@ -34,35 +33,35 @@
         <li class="nav-item">
           <a class="nav-link" href="#carrusel-section"
              data-bs-toggle="tooltip" data-bs-placement="bottom"
-             title="Ver el carrusel de animales domésticos 🐕🐈">
+             title="Ver el carrusel de animales">
             <i class="bi bi-images"></i> Carrusel
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#media-section"
              data-bs-toggle="tooltip" data-bs-placement="bottom"
-             title="Mosaico de videos y audios sobre animales 🎵🎬">
+             title="Mosaico de videos y audios">
             <i class="bi bi-collection-play"></i> Multimedia
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#cuento-section"
              data-bs-toggle="tooltip" data-bs-placement="bottom"
-             title="Un cuento mágico sobre animales domésticos 📖">
+             title="Un cuento📖">
             <i class="bi bi-book"></i> Cuento
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#arcoiris-section"
              data-bs-toggle="tooltip" data-bs-placement="bottom"
-             title="¡Arcoíris de colores con letras animadas! 🌈">
+             title="colores y letras🌈">
             <i class="bi bi-stars"></i> Arcoíris
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#footer"
              data-bs-toggle="tooltip" data-bs-placement="bottom"
-             title="Conoce al equipo de desarrollo 👥">
+             title="ver integrantes">
             <i class="bi bi-people"></i> Equipo
           </a>
         </li>
@@ -77,10 +76,10 @@
 <header style="background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%); color:white; padding: 60px 20px; text-align:center;">
   <div class="container">
     <h1 style="font-family:'Pacifico',cursive; font-size:3rem; text-shadow: 2px 3px 0 rgba(0,0,0,0.2);">
-      🐾 Animales Domésticos
+      🐾 Animales Domesticos
     </h1>
     <p style="font-size:1.1rem; margin-top:10px; opacity:0.9;">
-      Metodología Principal: <strong>CSS Grid</strong> · Con Flexbox &amp; Bootstrap
+      Metodologia: <strong>CSS Grid</strong> · Con Flexbox &amp; Bootstrap
     </p>
   </div>
 </header>
@@ -100,58 +99,65 @@
      ============================================= -->
 <section id="media-section" class="py-4" style="background:#e8f4fd;">
   <div class="container">
-    <h2 class="section-title">🎬 Mosaico de Audios y Videos</h2>
-    <p class="text-center text-muted mb-3" style="font-size:0.9rem;">Diseño con metodología <strong>CSS Grid</strong> — 3 columnas</p>
+    <h2 class="section-title">Mosaico</h2>
+    <p class="text-center text-muted mb-3" style="font-size:0.9rem;">Diseño <strong>CSS Grid</strong> — 3 columnas</p>
 
     <div class="media-grid">
-      <!-- VIDEO 1 -->
-      <div class="media-card">
-        <div class="media-label"><i class="bi bi-camera-video"></i> Perros inteligentes</div>
-        <iframe src="https://www.youtube.com/embed/XqZsoesa55w"
-          height="180" allowfullscreen title="Video perros"></iframe>
-      </div>
-      <!-- VIDEO 2 -->
-      <div class="media-card">
-        <div class="media-label"><i class="bi bi-camera-video"></i> Gatitos adorables</div>
-        <iframe src="https://www.youtube.com/embed/tntOCGkgt98"
-          height="180" allowfullscreen title="Video gatos"></iframe>
-      </div>
-      <!-- VIDEO 3 -->
-      <div class="media-card">
-        <div class="media-label"><i class="bi bi-camera-video"></i> Conejos y hámsters</div>
-        <iframe src="https://www.youtube.com/embed/9K6_-F8Bm1s"
-          height="180" allowfullscreen title="Video conejos"></iframe>
-      </div>
-      <!-- AUDIO 1 -->
-      <div class="media-card">
-        <div class="media-label"><i class="bi bi-music-note"></i> Sonidos de perros</div>
-        <audio controls>
-          <source src="https://www.soundsnap.com/file/soundsnap_9066.mp3" type="audio/mpeg">
-          <source src="https://www.freesoundslibrary.com/wp-content/uploads/2017/04/dogs-barking.mp3" type="audio/mpeg">
-          Tu navegador no soporta audio.
-        </audio>
-        <p style="font-size:0.75rem;padding:6px 14px;color:#555;">🔊 Ladridos y sonidos de perros domésticos</p>
-      </div>
-      <!-- AUDIO 2 -->
-      <div class="media-card">
-        <div class="media-label"><i class="bi bi-music-note"></i> Maullidos de gatos</div>
-        <audio controls>
-          <source src="https://www.freesoundslibrary.com/wp-content/uploads/2021/07/cats-meowing.mp3" type="audio/mpeg">
-          Tu navegador no soporta audio.
-        </audio>
-        <p style="font-size:0.75rem;padding:6px 14px;color:#555;">🐱 Suaves maullidos de gatitos felices</p>
-      </div>
-      <!-- AUDIO 3 -->
-      <div class="media-card">
-        <div class="media-label"><i class="bi bi-music-note"></i> Naturaleza y mascotas</div>
-        <audio controls>
-          <source src="https://www.freesoundslibrary.com/wp-content/uploads/2017/04/birds-chirping.mp3" type="audio/mpeg">
-          Tu navegador no soporta audio.
-        </audio>
-        <p style="font-size:0.75rem;padding:6px 14px;color:#555;">🌿 Sonidos naturales con animales del hogar</p>
-      </div>
-    </div>
+
+  <!-- VIDEO 1 -->
+  <div class="media-card">
+    <div class="media-label"><i class="bi bi-camera-video"></i> Perros</div>
+    <a href="https://www.youtube.com/watch?v=FoZdT_fAXew" target="_blank">
+      <img src="https://img.youtube.com/vi/FoZdT_fAXew/hqdefault.jpg" 
+           width="100%" height="180" 
+           style="object-fit:cover; border-radius:8px;">
+    </a>
   </div>
+
+  <!-- VIDEO 2 -->
+  <div class="media-card">
+    <div class="media-label"><i class="bi bi-camera-video"></i> Gatos</div>
+    <a href="https://www.youtube.com/watch?v=AxE4TltnvjI" target="_blank">
+      <img src="https://img.youtube.com/vi/AxE4TltnvjI/hqdefault.jpg" 
+           width="100%" height="180"
+           style="object-fit:cover; border-radius:8px;">
+    </a>
+  </div>
+
+<!-- VIDEO 3 -->
+<div class="media-card">
+  <div class="media-label"><i class="bi bi-camera-video"></i> Conejos</div>
+  <a href="https://youtu.be/WoNsRP_TKsE" target="_blank">
+    <img src="https://img.youtube.com/vi/WoNsRP_TKsE/hqdefault.jpg" 
+         width="100%" height="180"
+         style="object-fit:cover; border-radius:8px;">
+  </a>
+</div>
+
+</div>
+<!-- AUDIO 1 -->
+<div class="media-card">
+  <div class="media-label"><i class="bi bi-music-note"></i> Audio 1</div>
+  <audio controls>
+    <source src="Audio1.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<!-- AUDIO 2 -->
+<div class="media-card">
+  <div class="media-label"><i class="bi bi-music-note"></i> Audio 2</div>
+  <audio controls>
+    <source src="Audio2.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<!-- AUDIO 3 -->
+<div class="media-card">
+  <div class="media-label"><i class="bi bi-music-note"></i> Audio 3</div>
+  <audio controls>
+    <source src="Audio3.mp3" type="audio/mpeg">
+  </audio>
+</div>
 </section>
 
 <!-- =============================================
@@ -186,7 +192,7 @@
      ============================================= -->
 <footer id="footer">
   <div class="container text-center mb-3">
-    <h2 style="font-family:'Pacifico',cursive; color:#f77f00; font-size:1.8rem;">👥 Nuestro Equipo</h2>
+    <h2 style="font-family:'Pacifico',cursive; color:#f77f00; font-size:1.8rem;">Equipo</h2>
     <p style="color:#b3d4f5; font-size:0.85rem;">Grid: 2 filas × 4 columnas</p>
   </div>
 
@@ -194,7 +200,7 @@
   <iframe src="footer_grid.html" class="iframe-box" style="height:340px; background:transparent; border:none; width:100%;" title="Equipo de trabajo"></iframe>
 
   <div class="footer-credit">
-    <p>© 2026 MascotasMundo · Desarrollo Web · Grid + Flex + Bootstrap</p>
+    <p>Programacion web 2026</p>
   </div>
 </footer>
 
